@@ -17,22 +17,26 @@ void merge(vector<int>& v, int low, int hi, int mid) {
 			k++;
 			i++;
 		}
+
 		else {
 			temp[k] = v[j];
 			k++;
 			j++;
 		}
 	}
+
 	while (i <= mid) {
 		temp[k] = v[i];
 		k++;
 		i++;
 	}
+
 	while (j <= hi) {
 		temp[k] = v[k];
 		k++;
 		j++;
 	}
+
 	for (int i = low; i < k; i++)
 	{
 		v[i] = temp[i];
@@ -64,6 +68,4 @@ void bubblesort(vector<int> v) {
 			}
 		}
 	}
-
-
 }
